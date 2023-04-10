@@ -20,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText email_login;
     private EditText password_login;
     private Button exit_login;
+    private Button register_login;
     private TextView register_txt;
     private FirebaseAuth mAuth;
 
@@ -27,20 +28,27 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        register_login=findViewById(R.id.register_login);
         email_login = findViewById(R.id.email_login);
         password_login = findViewById(R.id.password_login);
         exit_login = findViewById(R.id.exit_login);
         register_txt = findViewById(R.id.register_txt);
-
         mAuth = FirebaseAuth.getInstance();
 
-        register_txt.setOnClickListener(new View.OnClickListener() {
+        register_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
+        /*register_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+            }
+        });*/
         exit_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
