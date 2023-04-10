@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "451846089910",
+    "project_id": "cutguruapp-7cac0",
+    "storage_bucket": "cutguruapp-7cac0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451846089910:android:7b6f3a213d957e1f9aca17",
+        "android_client_info": {
+          "package_name": "com.example.cutguruapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451846089910-rkkbcjbacc9cvftu14imdp27b16j20ii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk8HAbikhSM-se_5OcTwL1MvO2oeluHmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451846089910-rkkbcjbacc9cvftu14imdp27b16j20ii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
