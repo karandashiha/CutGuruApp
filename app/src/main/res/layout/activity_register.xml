@@ -1,49 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pink"
     tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="490dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="82dp"
+        android:background="@drawable/frame_for_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="100sp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="36dp"
         android:text="Реєстрація"
-        android:textSize="26dp" />
+        android:textSize="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/name_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/name_register"
         android:layout_width="246dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:hint="Вкажіть Ім’я та Прізвище  " />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Вкажіть Ім’я та Прізвище  "
+        app:layout_constraintBottom_toTopOf="@+id/email_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/email_register"
         android:layout_width="246dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/name_register"
-        android:hint="Email" />
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Email"
+        app:layout_constraintBottom_toTopOf="@+id/password_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/password_register"
         android:layout_width="246dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/email_register"
-        android:layout_marginTop="5dp"
-        android:hint="Password" />
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="35dp"
+        android:hint="Password"
+        app:layout_constraintBottom_toTopOf="@+id/exit_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/exit_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="188dp"
+        android:background="@color/dark_purple"
+        android:textColor="@color/pink"
         android:text="Зареєструватися"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/password_register"
-        android:layout_marginTop="13dp"
-        />
-</RelativeLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
