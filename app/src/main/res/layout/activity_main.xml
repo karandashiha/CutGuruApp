@@ -10,27 +10,58 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="350dp"
-        android:layout_height="406dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="162dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="163dp"
-        android:background="@color/light_purple"
+        android:layout_height="400dp"
+        android:background="@drawable/frame_for_calendar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <CalendarView
+            android:id="@+id/calendarview"
+            android:layout_width="340dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="30dp" />
+
     </LinearLayout>
 
-    <CalendarView
-        android:id="@+id/calendarView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="31dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+    <View
+        android:id="@+id/action_bar"
+        android:layout_width="412dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="106dp"
+        android:layout_weight="1"
+        android:background="@color/dark_purple"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <View
+        android:id="@+id/menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/ic_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/action_bar"
+        app:layout_constraintStart_toStartOf="@+id/action_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <View
+        android:id="@+id/massage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/ic_massage"
+        app:layout_constraintBottom_toBottomOf="@+id/action_bar"
+        app:layout_constraintEnd_toEndOf="@+id/action_bar"
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toEndOf="@+id/menu"
+        app:layout_constraintTop_toTopOf="@+id/action_bar"
+        app:layout_constraintVertical_bias="0.6" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

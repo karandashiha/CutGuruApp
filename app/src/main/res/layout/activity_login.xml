@@ -8,6 +8,19 @@
     android:background="@color/pink"
     tools:context=".LoginActivity">
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="61dp"
+        android:src="@drawable/login_picture"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/register_login"
         android:layout_width="wrap_content"
@@ -15,10 +28,10 @@
         android:layout_marginStart="53dp"
         android:layout_marginTop="512dp"
         android:layout_marginEnd="13dp"
-        android:layout_marginBottom="91dp"
+        android:layout_marginBottom="30dp"
         android:background="@color/dark_purple"
-        android:textColor="@color/pink"
         android:text="Реєстрація"
+        android:textColor="@color/pink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/exit_login"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,23 +44,52 @@
         android:layout_marginStart="13dp"
         android:layout_marginTop="512dp"
         android:layout_marginEnd="58dp"
-        android:layout_marginBottom="91dp"
+        android:layout_marginBottom="30dp"
         android:background="@color/dark_purple"
-        android:textColor="@color/pink"
         android:text="Увійти"
+        android:textColor="@color/pink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/register_login"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="410dp"
         android:background="@drawable/frame_for_login"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"></LinearLayout>
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Онлайн Запис Клієнтів"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/email_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/password_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="numberPassword"
+        app:layout_constraintBottom_toTopOf="@+id/register_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
             android:id="@+id/email_login"
@@ -63,35 +105,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/password_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="13dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="numberPassword"
-        app:layout_constraintBottom_toTopOf="@+id/register_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="45dp"
-        android:text="Онлайн Запис Клієнтів"
-        android:textSize="26dp"
-        app:layout_constraintBottom_toTopOf="@+id/email_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

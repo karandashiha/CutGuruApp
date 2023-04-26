@@ -8,8 +8,10 @@
     tools:context=".RegisterActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="350dp"
         android:layout_height="490dp"
+        android:orientation="vertical"
         android:layout_marginStart="22dp"
         android:layout_marginTop="83dp"
         android:layout_marginEnd="22dp"
@@ -17,72 +19,56 @@
         android:background="@drawable/frame_for_register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="40sp"
+            android:text="Реєстрація"
+            android:textSize="26dp"/>
+
+        <EditText
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="90dp"
+            android:id="@+id/name_register"
+            android:hint="Вкажіть Ім’я та Прізвище">
+
+        </EditText>
+        <EditText
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/email_register"
+            android:hint="Email  ">
+
+        </EditText>  <EditText
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/password_register"
+        android:hint="Password">
+
+    </EditText>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="75dp"
+    android:layout_marginTop="40dp"
+    android:id="@+id/exit_register"
+    android:text="Зареєструватися">
+
+</Button>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="36dp"
-        android:text="Реєстрація"
-        android:textSize="26dp"
-        app:layout_constraintBottom_toTopOf="@+id/name_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/name_register"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="5dp"
-        android:hint="Вкажіть Ім’я та Прізвище  "
-        app:layout_constraintBottom_toTopOf="@+id/email_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/email_register"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="5dp"
-        android:hint="Email"
-        app:layout_constraintBottom_toTopOf="@+id/password_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/password_register"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="35dp"
-        android:hint="Password"
-        app:layout_constraintBottom_toTopOf="@+id/exit_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/exit_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="188dp"
-        android:background="@color/dark_purple"
-        android:textColor="@color/pink"
-        android:text="Зареєструватися"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

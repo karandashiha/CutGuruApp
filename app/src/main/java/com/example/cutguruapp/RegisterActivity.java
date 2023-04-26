@@ -14,6 +14,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -22,15 +24,24 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText password_register;
     private Button exit_register;
     private FirebaseAuth mAuth;
+    private DatabaseReference database;
+    private FirebaseDatabase user_register;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
         mAuth=FirebaseAuth.getInstance();
+        user_register=FirebaseDatabase.getInstance();
+        database= user_register.getReference();
+
+
         name_register= findViewById(R.id.name_register);
         email_register= findViewById(R.id.email_register);
         password_register= findViewById(R.id.password_register);
         exit_register= findViewById(R.id. exit_register);
+
         exit_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +53,10 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if(task.isSuccessful()){
+                                        database.child("Users").child(mAuth.getCurrentUser().getUid()).child("name").setValue(name_register.getText().toString());
+                                        database.child("Users").child(mAuth.getCurrentUser().getUid()).child("email").setValue(email_register.getText().toString());
+                                        database.child("Users").child(mAuth.getCurrentUser().getUid()).child("password").setValue(password_register.getText().toString());
+
                                         Intent intent= new Intent(RegisterActivity.this, MainActivity.class);
                                         startActivity(intent);
                                     }else{
